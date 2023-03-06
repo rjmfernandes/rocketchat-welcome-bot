@@ -27,7 +27,7 @@ export class WelcomeBotApp extends App implements IPostRoomUserJoined {
         await configuration.settings.provideSetting({
             id: 'welcome_bot_configuration_json',
             type: SettingType.STRING,
-            packageValue: '{"WelcomeMessages":[{"ChannelName":"channel-0, channel-A","Message":["### Welcome {{USERNAME}} to the Channel {{CHANNEL_NAME}}!"," Each list item specifies one line in the message text."],"Actions":[{"ActionType":"button","ActionDisplayName":"Join Channels","ActionName":"action-name","ActionSuccessfulMessage":["Successfuly added to channels."],"ChannelsAddedTo":["channel-1","channel-2"]},{"ActionType":"automatic","ChannelsAddedTo":["channel-3","channel-4"]}]}]}',
+            packageValue: '{"WelcomeMessages":[{"ChannelName":"channel-0, channel-A","Message":["### Welcome {{USERNAME}} to the Channel #{{CHANNEL_NAME}}!"," Other channel of interest: #channel-1"]}]}',
             required: true,
             public: false,
             multiline: true,

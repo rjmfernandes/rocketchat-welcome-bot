@@ -12,8 +12,8 @@ It receives as setting a json configuration. An example bellow:
         {
             "ChannelName": "channel-0, channel-A",
             "Message": [
-                "### Welcome {{USERNAME}} to the Channel {{CHANNEL_NAME}}!",
-                " Each list item specifies one line in the message text."
+                "### Welcome {{USERNAME}} to the Channel #{{CHANNEL_NAME}}!",
+                " Other channel of interest: #channel-1"
             ]
         }
     ]
