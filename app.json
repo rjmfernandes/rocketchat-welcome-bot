@@ -1,0 +1,32 @@
+{
+    "id": "f2153e34-81d8-4f80-a9c7-f4ea96306609",
+    "version": "0.0.1",
+    "requiredApiVersion": "^1.19.0",
+    "iconFile": "icon.png",
+    "author": {
+        "name": "Rui Fernandes",
+        "homepage": "rocket.chat",
+        "support": "rocket.chat"
+    },
+    "name": "Welcome Bot",
+    "nameSlug": "welcome-bot",
+    "classFile": "WelcomeBotApp.ts",
+    "description": "Adds automation for first welcome messages on channels to users",
+    "permissions": [
+        {
+            "name": "message.write"
+        },
+        {
+            "name": "server-setting.read"
+        },
+        {
+            "name": "room.read"
+        },
+        {
+            "name": "room.write"
+        }
+    ],
+    "implements": [
+        "IPostRoomUserJoined"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "WelcomeMessages": [
+        {
+            "ChannelName": "channel-0, channel-A",
+            "Message": [
+                "### Welcome {{USERNAME}} to the Channel {{CHANNEL_NAME}}!",
+                " Each list item specifies one line in the message text."
+            ],
+            "Actions": [
+                {
+                    "ActionType": "button",
+                    "ActionDisplayName": "Join Channels",
+                    "ActionName": "action-name",
+                    "ActionSuccessfulMessage": [
+                        "Successfuly added to channels."
+                    ],
+                    "ChannelsAddedTo": [
+                        "channel-1",
+                        "channel-2"
+                    ]
+                },
+                {
+                    "ActionType": "automatic",
+                    "ChannelsAddedTo": [
+                        "channel-3",
+                        "channel-4"
+                    ]
+                }
+            ]
+        }
+    ]
+}
