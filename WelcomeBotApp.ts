@@ -45,15 +45,11 @@ export class WelcomeBotApp extends App implements IPostRoomUserJoined {
         if (!roomName)
             return;
 
-        console.log(JSON.stringify(context.room));
-        console.log('room:' + roomName);
         const welcomeMessage = this.getWelcomeMessage(jsonConf, roomName);
-        console.log("calling it");
+
         if (welcomeMessage) {
             const msgLines: string[] = welcomeMessage.Message;
-            console.log(msgLines.join('\n'));
             const fullMsg: string = this.replacePlaceholders(msgLines.join('\n'), roomName, context.joiningUser.name);
-            console.log(fullMsg);
             this.sendDirect(context, read, modify, fullMsg);
         }
     }
@@ -142,7 +138,6 @@ export class WelcomeBotApp extends App implements IPostRoomUserJoined {
             let welcomeMsg = jsonConf.WelcomeMessages[i];
             let rooms: string[] = welcomeMsg.ChannelName.split(',');
             if (rooms.indexOf(roomId) != -1) {
-                console.log("room " + roomId + " rooms " + rooms.join(','));
                 return welcomeMsg;
             }
         }
